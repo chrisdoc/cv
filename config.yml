@@ -1,0 +1,246 @@
+contacts:
+  name: Christoph Kieslich
+  title: Head of Engineering
+  email: c.kieslich@gmail.com
+  address: "Amsterdam, Netherlands"
+  location: Country
+  linkedin:
+    url: https://www.linkedin.com/in/kieslich/
+    displayText: kieslich
+  github:
+    url: https://github.com/chrisdoc/
+    displayText: "@chrisdoc"
+  website:
+    url: https://chrisdoc.dev
+    displayText: chrisdoc.dev
+
+position: Head of Engineering
+
+tagline: Innovative and results-driven Engineering Manager with over a decade of experience in leading software development teams and driving digital transformation initiatives for global companies. Known for directing large-scale product launches, particularly in circular business models and sustainability efforts, with a focus on operational efficiency and customer engagement. Skilled in aligning business strategy with technical execution, fostering collaboration across teams, and delivering scalable, high-impact digital platforms. Demonstrates a strong ability to lead cross-functional teams in complex, fast-paced environments while implementing cutting-edge solutions that meet strategic goals. Proven expertise in cloud computing, microservices architecture, and software engineering management, with a commitment to innovation and sustainability.
+
+jobs:
+  - position: Head of Engineering - Circular Ventures
+    company:
+      name: IKEA
+      link: https://www.ikea.com/
+    product:
+      name: IKEA preowned
+      link: https://preowened.ikea.com
+    description:
+      - Spearheaded the technology strategy for IKEA’s digital circularity products, including Buyback & Resell, Secondhand Online, and IKEA Preowned, driving sustainability efforts towards the company’s 2030 goals.
+      - Directed an engineering organization of over 20 developers, both internal and external, to deliver cutting-edge circular economy solutions across multiple global markets.
+      - Launched IKEA Preowned in Spain and Norway within one year, overseeing the entire process, including digital build vs. buy decisions, vendor selection, and due diligence.
+      - Generated widespread media attention with over 1,000 news outlets covering the launch of IKEA Preowned, marking one of the largest media engagements for any IKEA initiative.
+      - Streamlined the technology stack by consolidating from two public cloud vendors to one, increasing efficiency and reducing operational costs by 24%.
+      - Scaled the Buyback & Resell and Secondhand Online platforms to 28 markets, doubling customer usage to 400,000 and facilitating the reuse of over 1,000,000 items in FY24.
+
+    from: "2023 Oct."
+    to: "present"
+    tags:
+      - Sustainability
+      - Platform Business Models
+      - Innovation Start-up
+    location: Amsterdam, Netherlands
+  - position: Engineering Manager - Life@Home
+    company:
+      name: IKEA
+      link: https://ikea.com/
+    product:
+      name: Life@Home
+      link: https://ikea.com/
+    description:
+      - Orchestrated the development of the Life@Home experience platform, delivering innovative solutions to enhance IKEA's digital shopping experience.
+      - Collaborated with the New Business and Innovation teams to redefine shopping experiences, launching new features that aligned with modern consumer behaviors and preferences.
+      - Optimized platform architecture by working closely with the Enterprise Architecture team, ensuring a unified, scalable solution that met both technical and business goals.
+      - Transformed strategic business objectives into actionable technical solutions, bridging the gap between design visions and engineering execution for enhanced customer outcomes.
+      - Accelerated innovation within IKEA’s established retail structure by introducing startup-style agility, which led to faster deployment of key features and improvements.
+
+    from: "2023 Feb."
+    to: "2023 Oct."
+    tags:
+      - Platform Business Models
+      - Platform Architecture
+      - Microservices
+    location: Amsterdam, Netherlands
+  - position: Director Software Engineering | Mobile, Hype & Digital Retail
+    company:
+      name: adidas
+      link: https://www.adidas.com/
+    description:
+      - Championed the launch of the "Made To Be Remade" initiative, transitioning adidas to a circular business model that incentivizes consumers to purchase, wear, and return items for rewards, successfully implemented in over 20 countries across EMEA, NAM, and LAM.
+      - Navigated the complexities of setting up product and recycling attributes across various systems, enhancing operational efficiency from product creation to reverse logistics.
+      - Assumed leadership of the Mobile Hype & Digital Retail backend development chapter during a colleague's parental leave, effectively reorganizing workflows to boost team performance and deliverables.
+      - Introduced quality standards and technical refactoring initiatives to ensure that microservices were primed for peak holiday performance, successfully Launched high-demand events such as Singles Day, Black Friday, and Cyber Monday.
+      - Nurtured a culture of sustainability and innovation within the organization by collaborating with cross-functional teams to optimize the integration of circular services into existing platforms
+
+    from: "2022 May."
+    to: "2023 Jan."
+    tags:
+      - DevOps
+      - CI/CD
+      - Black Friday
+    location: Amsterdam, Netherlands
+  - position: Digital Associate
+    company:
+      name: McKinsey & Company
+      link: "https://www.mckinsey.com/"
+    description:
+      - Led initiatives to enhance Agile practices and empower client software development teams to adopt DevSecOps, driving self-sufficiency and full end-to-end responsibility for development processes.
+      - Enabled clients to productize internal services, fostering a self-service model that allowed over 30+ teams to streamline processes and reduce customer waiting times, freeing up more resources for feature development.
+      - Played a pivotal role in coaching 30+ teams in collaboration with the client's transformation office, optimizing their ordering and fulfillment processes to boost efficiency.
+      - Formulated and delivered hands-on DevSecOps training, integrating Azure DevOps for building, testing, and deploying modern web applications to the Azure public cloud, engaging hundreds of colleagues through company-wide hackathons.
+      - Facilitated the DevSecOps Hackathon, training consultants in modern software development lifecycles, significantly increasing internal expertise and accelerating the adoption of cutting-edge DevOps practices across teams.
+
+    from: "2020 Oct."
+    to: "2022 Apr."
+    tags:
+      - Management Consulting
+      - C-Level advisory
+      - Large scale DevOps transformations
+    location: Los Angeles, USA
+  - position: Consulting Director
+    company:
+      name: Reaktor
+      link: "https://reaktor.com/"
+    description:
+      - Pioneered client growth and success by specializing in e-commerce strategies, resulting in enhanced revenue streams and market positioning for key accounts.
+      - Cultivated strong client relationships through effective communication and collaboration, significantly improving client satisfaction and retention rates.
+      - Executed recruitment, resourcing, and staffing initiatives, optimizing team performance and ensuring the right talent was in place to meet project demands.
+      - Secured new client acquisitions by showcasing case studies that highlighted successful project outcomes, contributing to a robust pipeline of business opportunities.
+      - Fostered a culture of continuous learning and innovation within the organization by facilitating knowledge-sharing sessions with partners.
+
+    from: "2018 Nov."
+    to: "2022 OCt."
+    tags:
+      - Replatforming
+      - Consulting
+      - Headless e-commerce
+    location: Amsterdam, Netherlands
+  - position: Senior Software Engineer
+    company:
+      name: Reaktor
+      link: "https://reaktor.com/"
+    description:
+      - Engineered a cutting-edge e-commerce platform for a leading global sports brand, leveraging modern web technologies to deliver the fastest online shopping experiences in the industry.
+      - Achieved a 66% reduction in page load times, significantly enhancing user experience and optimizing performance during peak shopping events such as Black Friday and Cyber Monday.
+      - Rolled out the platform across over 40 markets and two major brands, facilitating seamless international operations and expanding market reach.
+      - Accelerated release cycles from six weeks to daily deployments, streamlining development processes and enabling quicker responses to market demands.
+      - Built a robust technology foundation utilized by over 80 engineers across multiple teams, enhancing collaboration in product discovery, campaign pages, and checkout functionalities.
+    from: "2019 Jan."
+    to: "2019 Dec."
+    tags:
+      - Team Lead
+      - Replatforming
+      - Headless e-commerce
+    location: Amsterdam, Netherlands
+  - position: Android Software Developer
+    company:
+      name: Evenly Gmbh
+      link: "https://evenly.io/"
+    description:
+      - Redesigned the Hamburger Sportverein app, reworking the underlying architecture to enhance performance and user experience, resulting in a 29% increase in user ratings (3.47 to 4.5).
+      - Advanced the app's overall functionality and user experience by engaging with the iOS engineering team to enhance the Grammofy application, contributing to the development of two new features and resolving multiple bugs.
+      - Leveraged best practices in mobile development to ensure high-quality code and efficient application performance for both the HSV and Borussia Dortmund apps.
+    from: "2017 Jan."
+    to: "2017 May."
+    tags:
+      - Android
+      - Mobile Development
+    location: Berlin, Germany
+  - position: Mobile Lead
+    company:
+      name: MeeDoc
+      link: "https://meedoc.com/"
+    description:
+      - Drove the development of native mobile apps for MeeDoc, a telemedicine platform, improving accessibility for patients across Finland, Norway, Sweden, Spain, UK, and Ireland.
+      - Integrated advanced analytics systems to track and enhance patient engagement and satisfaction, resulting in a significant increase in user retention.
+      - Enhanced the Android app using cutting-edge technologies like Dagger 2, Retrofit 2, and Material Design, ensuring high performance and an intuitive user experience.
+      - Optimized the iOS app with AlamoFire, SocketRocket, and SnapKit/Masonry, leading to faster response times and a more seamless experience for users.
+      - Delivered real-time communication capabilities through chat and video features, reducing patient response times to under 15 minutes.
+      - Implemented secure, mobile health record management, enabling patients to easily consult licensed doctors and receive electronic prescriptions and referrals on the go.
+      - Partnered closely with cross-functional teams to maintain backend functionality with Scala, ensuring the platform’s stability and scalability.
+      # - Improved 24/7 access to healthcare by facilitating seamless communication between patients and a pool of doctors, driving higher patient satisfaction.
+    from: "2014 Oct."
+    to: "2016 Dec."
+    tags:
+      - Mobile Development
+      - Healthcare
+      - Start-up
+    location: Helsinki, Finland
+
+objective: Seeking to advance my skills and build a strong career with a company that values innovation and creativity.
+
+education:
+  - place:
+      name: University of Applied Sciences Upper
+      link: "https://fh-ooe.at/en/degree-programs/mobile-computing-master"
+    degree: "M.Sc."
+    major: Mobile Computing
+    track: Mobile Computing
+    from: "2012"
+    to: "2014"
+    location: Hagenberg, Austria
+  - place:
+      name: University of Applied Sciences Upper
+      link: "https://fh-ooe.at/en/degree-programs/mobile-computing-master"
+    degree: "B.Sc."
+    major: Mobile Computing
+    track: Mobile Computing
+    from: "2009"
+    to: "2012"
+    location: Hagenberg, Austria
+
+technical_skills:
+  - skill: Programming Languages
+    description: Java, TypeScript, Python
+  - skill: Cloud Platforms
+    description: AWS, Azure, GCP
+  - skill: DevOps Tools
+    description: GitHub, Azure DevOps, Docker, Kubernetes
+  - skill: Database Technologies
+    description: MySQL, PostgreSQL, MongoDB
+  - skill: Frameworks
+    description: Spring Boot, React, NextJS
+  - skill: Agile Tools
+    description: Jira, Confluence, Linear
+
+methodology:
+  - Lean
+  - Kanban
+  - Design Thinking
+  - Test-Driven Development
+  - Pair Programming
+
+languages:
+  - name: English
+    proficiency: Fluent
+  - name: German
+    proficiency: Native
+
+core_competencies:
+  - Engineering Leadership
+  - Product and Team Management
+  - Agile Methodologies (Scrum, Kanban)
+  - Strategic Planning & Execution
+  - Digital Transformation & Innovation
+  - Circular Economy Solutions
+  - Cloud Technologies (Azure, AWS, GCP)
+  - Technical Architecture Design
+  - Cross-functional Team Collaboration
+  - Process Optimization and Automation
+  - Customer-Centric Development
+  - Sustainable Business Strategies
+
+personal_skills:
+  - Effective Listening
+  - Decision Making
+  - Emotional Intelligence
+  - Teamwork
+  - Adaptability
+  - Problem Solving
+  - Overcoming Objections
+  - Creativity
+  - Analytical
+  - Multitasking
+  - Interpersonal Skills
+  - Organization
