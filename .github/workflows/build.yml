@@ -1,5 +1,15 @@
 name: Build Typst document
-on: [push, workflow_dispatch]
+
+on:
+  push:
+    branches:
+      - main
+    tags:
+      - "*"
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -16,15 +26,19 @@ jobs:
         with:
           source_file: cv.typ
 
+      - name: Rename PDF
+        run: mv cv.pdf CV_Christoph_Kieslich.pdf
+
       - name: Upload PDF file
         uses: actions/upload-artifact@v5
         with:
           name: PDF
-          path: cv.pdf
+          path: CV_Christoph_Kieslich.pdf
 
       - uses: EndBug/add-and-commit@v9
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         with:
-          add: cv.pdf
+          add: CV_Christoph_Kieslich.pdf
 
       - name: Get current date
         id: date
@@ -32,7 +46,7 @@ jobs:
 
       - name: Release
         uses: softprops/action-gh-release@v2
-        if: github.ref_type == 'tag'
+        if: github.event_name == 'push' && github.ref_type == 'tag'
         with:
           name: "${{ github.ref_name }} — ${{ env.DATE }}"
-          files: cv.pdf
+          files: CV_Christoph_Kieslich.pdf
