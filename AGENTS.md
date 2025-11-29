@@ -22,9 +22,10 @@ When updating content:
 
 ## Automation and CI
 
-- The GitHub Actions workflow in `.github/workflows/build.yml` is the single source of truth for how the CV is built.
-- When you make changes that affect the document, rely on CI to compile `cv.typ` into a PDF. Branch and pull request builds upload `CV_Christoph_Kieslich.pdf` as an artifact; only pushes to `main` commit the PDF to the repository root so the README link stays current.
-- Do not modify the existing workflow or add new workflows unless an issue explicitly asks for it.
+- The GitHub Actions workflows in `.github/workflows/verify.yml` and `.github/workflows/release.yml` are the single source of truth for how the CV is built and released.
+- When you make changes that affect the document, rely on CI to compile `cv.typ` into a PDF. Branch and pull request builds (via `verify.yml`) upload `CV_Christoph_Kieslich.pdf` as an artifact; only pushes to `main` (via `release.yml`) commit the PDF to the repository root so the README link stays current and publish GitHub Releases.
+- The release workflow automatically creates incrementing semantic version tags (for example `v1.0.0`, `v1.0.1`, …) on pushes to `main`, and those tags drive the published releases.
+- Do not modify the existing workflows or add new workflows unless an issue explicitly asks for it.
 
 ## Git and pull requests
 
