@@ -1,4 +1,4 @@
-name: Build Typst document
+name: Build and release Typst document
 
 on:
   push:
@@ -7,16 +7,13 @@ on:
       - main
     tags:
       - "*"
-  pull_request:
-    branches:
-      - main
   workflow_dispatch:
 
 permissions:
   contents: write
 
 jobs:
-  build:
+  build-and-release:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -40,7 +37,8 @@ jobs:
 
       # Keep the latest generated PDF committed on main so the README link to
       # the file in the repository root always stays up to date.
-      - uses: EndBug/add-and-commit@v9
+      - name: Commit updated PDF to main
+        uses: EndBug/add-and-commit@v9
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         with:
           add: CV_Christoph_Kieslich.pdf
@@ -53,8 +51,7 @@ jobs:
         if: >-
           github.event_name == 'push' &&
           github.ref == 'refs/heads/main' &&
-          !startsWith(github.event.head_commit.message,
-          'Commit from GitHub Actions')
+          github.actor != 'github-actions[bot]'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |

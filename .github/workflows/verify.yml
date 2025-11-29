@@ -1,0 +1,33 @@
+name: Verify Typst document
+
+on:
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Typst
+        uses: lvignoli/typst-action@main
+        with:
+          source_file: cv.typ
+
+      # typst-action outputs a PDF named after the source file; rename it to the
+      # desired public filename for repository links and PR artifacts.
+      - name: Rename PDF
+        run: mv cv.pdf CV_Christoph_Kieslich.pdf
+
+      - name: Upload PDF file
+        uses: actions/upload-artifact@v5
+        with:
+          name: PDF
+          path: CV_Christoph_Kieslich.pdf
