@@ -2,6 +2,7 @@ name: Build Typst document
 
 on:
   push:
+    # Build on main and on any tag push (tag builds are used for releases).
     branches:
       - main
     tags:
@@ -26,6 +27,8 @@ jobs:
         with:
           source_file: cv.typ
 
+      # typst-action outputs a PDF named after the source file; rename it to the
+      # desired public filename for repository links and release assets.
       - name: Rename PDF
         run: mv cv.pdf CV_Christoph_Kieslich.pdf
 
@@ -35,6 +38,8 @@ jobs:
           name: PDF
           path: CV_Christoph_Kieslich.pdf
 
+      # Keep the latest generated PDF committed on main so the README link to
+      # the file in the repository root always stays up to date.
       - uses: EndBug/add-and-commit@v9
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         with:
@@ -44,9 +49,11 @@ jobs:
         id: date
         run: echo "DATE=$(date +%Y-%m-%d-%H:%M)" >> $GITHUB_ENV
 
+      # Create a GitHub release (with the built PDF attached) only when
+      # pushing tags; PRs and branch pushes won't publish releases.
       - name: Release
         uses: softprops/action-gh-release@v2
-        if: github.event_name == 'push' && github.ref_type == 'tag'
+        if: github.event_name == 'push' && startsWith(github.ref, 'refs/tags/')
         with:
           name: "${{ github.ref_name }} — ${{ env.DATE }}"
           files: CV_Christoph_Kieslich.pdf
