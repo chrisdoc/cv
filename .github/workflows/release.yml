@@ -45,8 +45,7 @@ jobs:
 
       # When a pull request is merged into main (or any direct push to main),
       # automatically create a new version tag so a release is published for
-      # that change. The tag push will trigger this workflow again, and the
-      # Release step below will attach the freshly built PDF.
+      # that change.
       - name: Create release tag on main pushes
         if: >-
           github.event_name == 'push' &&
@@ -74,15 +73,34 @@ jobs:
           git tag "${next_tag}"
           git push origin "${next_tag}"
 
+          # Expose the tag so a later step in this job can publish the release
+          # without relying on the tag push to trigger a new workflow run
+          # (pushes made with GITHUB_TOKEN do not start workflows).
+          echo "NEXT_RELEASE_TAG=${next_tag}" >> "$GITHUB_ENV"
+
       - name: Get current date
         id: date
         run: echo "DATE=$(date +%Y-%m-%d-%H:%M)" >> $GITHUB_ENV
 
-      # Create a GitHub release (with the built PDF attached) only when
-      # pushing tags; PRs and branch pushes won't publish releases.
-      - name: Release
+      # Create a GitHub release for auto-tagged pushes to main in the same
+      # workflow run that created the tag.
+      - name: Release for main pushes
+        uses: softprops/action-gh-release@v2
+        if: >-
+          github.event_name == 'push' &&
+          github.ref == 'refs/heads/main' &&
+          env.NEXT_RELEASE_TAG != ''
+        with:
+          tag_name: ${{ env.NEXT_RELEASE_TAG }}
+          name: "${{ env.NEXT_RELEASE_TAG }} — ${{ env.DATE }}"
+          files: CV_Christoph_Kieslich.pdf
+
+      # Create a GitHub release (with the built PDF attached) when tags are
+      # pushed manually. This keeps support for "git push --tags" flows.
+      - name: Release for tag pushes
         uses: softprops/action-gh-release@v2
         if: github.event_name == 'push' && startsWith(github.ref, 'refs/tags/')
         with:
+          tag_name: ${{ github.ref_name }}
           name: "${{ github.ref_name }} — ${{ env.DATE }}"
           files: CV_Christoph_Kieslich.pdf
