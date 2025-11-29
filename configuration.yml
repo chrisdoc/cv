@@ -1,6 +1,6 @@
 contacts:
   name: Christoph Kieslich
-  title: Head of Engineering
+  title: Head of Engineering (Senior Director)
   email: c.kieslich@gmail.com
   address: "Amsterdam, Netherlands"
   location: Country
@@ -14,11 +14,32 @@ contacts:
     url: https://chrisdoc.dev
     displayText: chrisdoc.dev
 
-position: Head of Engineering
+position: Head of Engineering (Senior Director), IKEA Experience Platform
 
-tagline: Innovative and results-driven Engineering Manager with over a decade of experience in leading software development teams and driving digital transformation initiatives for global companies. Known for directing large-scale product launches, particularly in circular business models and sustainability efforts, with a focus on operational efficiency and customer engagement. Skilled in aligning business strategy with technical execution, fostering collaboration across teams, and delivering scalable, high-impact digital platforms. Demonstrates a strong ability to lead cross-functional teams in complex, fast-paced environments while implementing cutting-edge solutions that meet strategic goals. Proven expertise in cloud computing, microservices architecture, and software engineering management, with a commitment to innovation and sustainability.
+tagline: Head of Engineering (Senior Director) for IKEA's Experience Platform, leading cross-functional teams across analytics, experimentation, and design systems to empower 3,000+ engineers worldwide and deliver scalable, data-driven digital experiences that improve shopping journeys and developer productivity.
 
 jobs:
+  - position: Head of Engineering (Senior Director) - Experience Platform
+    company:
+      name: IKEA
+      link: https://www.ikea.com/
+    product:
+      name: IKEA Experience Platform
+      link: https://www.ikea.com/
+    description:
+      - Lead cross-functional engineering teams in areas including analytics platforms, experimentation tools, design systems, and platform infrastructure, effectively managing both internal engineers and external consultants.
+      - Drive AI initiatives in technology by evaluating AI-powered development tools for rapid prototyping, assessing conversational analytics platforms, and implementing custom enterprise agents to enhance developer productivity.
+      - Transform Developer Experience through the creation and rollout of engineering metrics platforms, optimization of developer tools, and establishment of productivity measurement systems impacting over 3,000 engineers across multiple markets.
+      - Establish engineering management best practices for distributed teams by introducing structured one-on-one meetings, goal-setting frameworks, and robust performance management processes for both permanent staff and consultants.
+      - Orchestrate platform strategy initiatives, including data governance for analytics systems, cost optimization programs, and the implementation of cross-team collaboration frameworks to standardize digital experience creation.
+
+    from: "2025 Oct."
+    to: "present"
+    tags:
+      - Engineering Leadership
+      - Developer Experience
+      - Platform Strategy
+    location: Amsterdam, North Holland, Netherlands
   - position: Head of Engineering - Circular Ventures
     company:
       name: IKEA
@@ -35,7 +56,7 @@ jobs:
       - Scaled the Buyback & Resell and Secondhand Online platforms to 28 markets, doubling customer usage to 400,000 and facilitating the reuse of over 1,000,000 items in FY24.
 
     from: "2023 Oct."
-    to: "present"
+    to: "2025 Oct."
     tags:
       - Sustainability
       - Platform Business Models
