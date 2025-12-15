@@ -27,7 +27,7 @@ jobs:
         run: mv cv.pdf CV_Christoph_Kieslich.pdf
 
       - name: Upload PDF file
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v6
         with:
           name: PDF
           path: CV_Christoph_Kieslich.pdf
