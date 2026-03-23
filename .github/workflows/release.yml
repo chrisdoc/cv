@@ -38,7 +38,7 @@ jobs:
       # Keep the latest generated PDF committed on main so the README link to
       # the file in the repository root always stays up to date.
       - name: Commit updated PDF to main
-        uses: EndBug/add-and-commit@v9
+        uses: EndBug/add-and-commit@v10
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         with:
           add: CV_Christoph_Kieslich.pdf
