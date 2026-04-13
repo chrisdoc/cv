@@ -85,7 +85,7 @@ jobs:
       # Create a GitHub release for auto-tagged pushes to main in the same
       # workflow run that created the tag.
       - name: Release for main pushes
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@v3
         if: >-
           github.event_name == 'push' &&
           github.ref == 'refs/heads/main' &&
@@ -98,7 +98,7 @@ jobs:
       # Create a GitHub release (with the built PDF attached) when tags are
       # pushed manually. This keeps support for "git push --tags" flows.
       - name: Release for tag pushes
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@v3
         if: github.event_name == 'push' && startsWith(github.ref, 'refs/tags/')
         with:
           tag_name: ${{ github.ref_name }}
