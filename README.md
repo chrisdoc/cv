@@ -1,46 +1,39 @@
 # CV - Christoph Kieslich
 
-This repository contains the source for my CV, generated from a [Typst](https://typst.app) document and a YAML configuration file.
+This repository contains the source for my CV, generated from [`rendercv.yml`](rendercv.yml) with [RenderCV](https://rendercv.com/).
 
 You can always download the latest compiled PDF from the repository root as [`CV_Christoph_Kieslich.pdf`](CV_Christoph_Kieslich.pdf).
 
 ## Repository structure
 
-- `cv.typ` – Typst source file using the `@preview/vantage-cv` template.
-- `configuration.yml` – Data for experience, education, skills, and other CV content.
+- `rendercv.yml` – CV content and layout configuration.
+- `mise.toml` – Pinned local tools and build tasks.
+- `pyproject.toml` and `uv.lock` – Locked RenderCV environment.
 - `CV_Christoph_Kieslich.pdf` – Generated CV committed by CI on `main` so the link above stays up to date.
 - `.github/workflows/release.yml` – GitHub Actions workflow that builds the PDF on pushes to `main` and tags, commits the updated PDF on `main`, and publishes GitHub Releases.
-- `.github/workflows/verify.yml` – GitHub Actions workflow that verifies pull requests by compiling the Typst document and uploading the generated PDF as an artifact.
+- `.github/workflows/verify.yml` – GitHub Actions workflow that verifies pull requests by rendering the CV and uploading the generated PDF as an artifact.
 
 ## Editing the CV
 
-Most updates can be made by editing `configuration.yml`:
-
-- Add or update roles under `jobs`.
-- Adjust the headline (`position`) and `tagline`.
-- Update contact details under `contacts`.
-- Tweak skills, methodologies, and other lists.
-
-For structural or layout changes, edit `cv.typ`.
-
-After committing and pushing your changes, GitHub Actions will compile `cv.typ` and upload `CV_Christoph_Kieslich.pdf` as a build artifact on pull requests and other branches. When changes land on `main`, the release workflow also commits the updated PDF to the repository root so the README link stays current.
+Edit `rendercv.yml` to update content or layout. After committing and pushing your changes, GitHub Actions will render and upload `CV_Christoph_Kieslich.pdf` as a pull-request artifact. When changes land on `main`, the release workflow also commits the updated PDF to the repository root.
 
 ## Building locally
 
-If you have the [Typst CLI](https://github.com/typst/typst) installed, you can build the PDF locally:
+Install the pinned tools and dependencies, then build the PDF:
 
 ```bash
-typst compile cv.typ
+mise install
+mise run setup
+mise run build
 ```
 
-This will produce `cv.pdf` in the repository root. You generally do not need to commit this local file; CI will generate and commit `CV_Christoph_Kieslich.pdf` on `main`.
+The build writes `CV_Christoph_Kieslich.pdf` directly to the repository root. If `mise` already manages your tools, `mise run build` is sufficient because `uv run --locked` keeps the project environment in sync.
 
 ## Releases
 
 The release workflow also manages tagged releases. When a change is pushed to `main`, it will automatically create the next semantic version tag (for example `v1.1.0`) and push it. Tag pushes then trigger the workflow again so GitHub Actions can:
 
-- Compile `cv.typ` to a PDF.
-- Rename `cv.pdf` to `CV_Christoph_Kieslich.pdf`.
+- Render `rendercv.yml` directly to `CV_Christoph_Kieslich.pdf`.
 - Create a GitHub Release for that tag.
 - Attach the generated `CV_Christoph_Kieslich.pdf` to the release.
 

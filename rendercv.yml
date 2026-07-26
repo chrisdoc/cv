@@ -1,0 +1,190 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/rendercv/rendercv/refs/tags/v2.8/schema.json
+cv:
+  name: Christoph Kieslich
+  headline: Senior Engineering Leader | Developer Platforms and Generative AI
+  location: Amsterdam, Netherlands
+  email: c.kieslich@gmail.com
+  website: https://chrisdoc.dev
+  social_networks:
+    - network: LinkedIn
+      username: kieslich
+    - network: GitHub
+      username: chrisdoc
+  sections:
+    Professional Summary:
+      - "Senior engineering leader with experience building digital products and internal platforms at IKEA, adidas, McKinsey, and Reaktor. Currently leads IKEA's 45-person Experience Platform organisation through four Engineering Managers and one Principal Engineer. Its platforms and developer tools support more than 3,000 engineers worldwide."
+
+    Experience:
+      - company: IKEA
+        position: Head of Engineering (Senior Director) – Experience Platform
+        start_date: 2025-10
+        end_date: present
+        location: Amsterdam, North Holland, Netherlands
+        highlights:
+          - "Lead a 45-person engineering organisation through four Engineering Managers and one Principal Engineer across analytics, experimentation, design systems, and platform infrastructure used by more than 3,000 engineers worldwide."
+          - "Started GitHub Copilot enablement as a cross-functional side project and grew adoption across IKEA from 600 to more than 1,800 users in 12 months."
+          - "Led the development of a Model Context Protocol (MCP) server that gives coding agents context from IKEA's component library, cutting major-version upgrades from days to hours per project."
+          - "Built reporting that links AI tooling spend to software delivery performance (DORA), so engineering managers and senior leaders can compare spending with delivery results."
+          - "Lead the consolidation of five overlapping tools into one platform. The change is projected to cut vendor spend by 30% while reducing tool switching and the number of support contracts."
+          - "Lead a redesign of the 45-person organisation based on Team Topologies, moving to smaller teams with clearer ownership and end-to-end accountability."
+
+      - company: IKEA
+        position: Head of Engineering – Circular Ventures
+        start_date: 2023-10
+        end_date: 2025-10
+        location: Amsterdam, Netherlands
+        highlights:
+          - "Led technology strategy and an engineering organisation of more than 20 people for Buyback & Resell, Secondhand Online, and IKEA Preowned."
+          - "Launched IKEA Preowned in Spain and Norway within one year, leading build-versus-buy analysis, vendor selection, and due diligence. The launch drew coverage from more than 1,000 news outlets."
+          - "Expanded Buyback & Resell and Secondhand Online to 28 markets, doubled the customer base to 400,000, and supported the reuse of more than one million items in FY24."
+          - "Reduced the number of public cloud providers from two to one and cut operating costs by 24%."
+
+      - company: IKEA
+        position: Engineering Manager – Life@Home
+        start_date: 2023-02
+        end_date: 2023-10
+        location: Amsterdam, Netherlands
+        highlights:
+          - "Led engineering for IKEA's Life@Home experience platform, working with New Business, Innovation, and Enterprise Architecture to turn business goals into a scalable platform architecture."
+
+      - company: adidas
+        position: Director Software Engineering | Mobile, Hype & Digital Retail
+        start_date: 2022-05
+        end_date: 2023-01
+        location: Amsterdam, Netherlands
+        highlights:
+          - "Led technology delivery for Made To Be Remade across more than 20 countries in EMEA and the Americas. Integrated product and recycling data from product creation through reverse logistics to support a circular return-and-reward model."
+          - "Took over the Mobile Hype & Digital Retail backend chapter during a colleague's parental leave and reorganised its work."
+          - "Set quality standards and led microservice refactoring ahead of Singles Day, Black Friday, and Cyber Monday."
+
+      - company: McKinsey & Company
+        position: Digital Associate
+        start_date: 2020-10
+        end_date: 2022-04
+        location: Los Angeles, USA
+        highlights:
+          - "Coached more than 30 client teams in DevSecOps, Agile delivery, and end-to-end ownership."
+          - "Helped turn internal services into self-service products used by more than 30 teams, so teams spent less time waiting and more time on product features."
+          - "Designed and taught Azure DevOps training for building, testing, and deploying cloud applications; reached hundreds of colleagues through company-wide hackathons."
+
+    Earlier Experience:
+      - company: Reaktor
+        position: Consulting Director
+        start_date: 2018-11
+        end_date: 2020-09
+        location: Amsterdam, Netherlands
+        highlights:
+          - "Led e-commerce client relationships, hiring, staffing, and new-business work."
+
+      - company: Reaktor
+        position: Senior Software Engineer
+        start_date: 2019-01
+        end_date: 2019-12
+        location: Amsterdam, Netherlands
+        highlights:
+          - "Built an e-commerce platform for more than 40 markets and two brands, cut page-load time by 66%, and moved releases from every six weeks to daily."
+          - "Built shared foundations used by more than 80 engineers across product discovery, campaigns, and checkout."
+
+      - company: Evenly GmbH
+        position: Android Software Developer
+        start_date: 2017-01
+        end_date: 2017-05
+        location: Berlin, Germany
+        highlights:
+          - "Rebuilt the Hamburger Sportverein Android app and raised its rating from 3.47 to 4.5."
+
+      - company: MeeDoc
+        position: Mobile Lead
+        start_date: 2014-10
+        end_date: 2016-12
+        location: Helsinki, Finland
+        highlights:
+          - "Led native mobile development for a telemedicine service operating in six European countries."
+          - "Delivered chat, video, and mobile health-record features that kept patient response times below 15 minutes."
+
+    Selected Open Source:
+      - name: "[Hevy MCP](https://github.com/chrisdoc/hevy-mcp) | Creator & Maintainer"
+        summary: Open-source MCP server connecting AI assistants to workout data
+        highlights:
+          - "Built the product end to end with an AI-native development workflow. It now has 1,500 weekly active users and more than 360 GitHub stars."
+
+    Education:
+      - institution: University of Applied Sciences Upper Austria
+        area: Mobile Computing
+        degree: MSc
+        date: "2012–2014"
+        location: Hagenberg, Austria
+      - institution: University of Applied Sciences Upper Austria
+        area: Mobile Computing
+        degree: BSc
+        date: "2009–2012"
+        location: Hagenberg, Austria
+
+    Leadership & Technical Scope:
+      - label: Leadership
+        details: Management of managers, organisation design, platform strategy, RFPs, vendor evaluation, build-versus-buy decisions
+      - label: Developer platforms
+        details: Developer experience, generative AI tooling, MCP, engineering intelligence, DORA metrics, DevSecOps, CI/CD
+      - label: Shared platforms
+        details: Experimentation, product analytics, design systems, cloud cost management, data governance
+      - label: Circular platforms
+        details: Recommerce, buyback and resale, reverse logistics, marketplace models, sustainable business transformation
+      - label: Technology
+        details: AWS, Azure, GCP, Kubernetes, Docker, Java, TypeScript, Python
+
+    Languages:
+      - label: English
+        details: Fluent
+      - label: German
+        details: Native
+
+design:
+  theme: classic
+  page:
+    size: a4
+    top_margin: 1.6cm
+    bottom_margin: 1.6cm
+    left_margin: 1.6cm
+    right_margin: 1.6cm
+    show_footer: true
+    show_top_note: false
+  typography:
+    line_spacing: 0.65em
+    alignment: left
+    font_family:
+      body: Source Sans 3
+      name: Source Sans 3
+      headline: Source Sans 3
+      connections: Source Sans 3
+      section_titles: Source Sans 3
+    font_size:
+      body: 10pt
+      name: 26pt
+      headline: 10.5pt
+      connections: 9.2pt
+      section_titles: 1.3em
+  header:
+    space_below_name: 0.3cm
+    space_below_headline: 0.35cm
+    space_below_connections: 0.45cm
+  section_titles:
+    type: with_partial_line
+    space_above: 0.35cm
+    space_below: 0.2cm
+  sections:
+    allow_page_break: true
+    space_between_regular_entries: 1em
+    space_between_text_based_entries: 0.2em
+    show_time_spans_in: []
+  entries:
+    allow_page_break: false
+    space_between_columns: 0.1cm
+    highlights:
+      space_above: 0cm
+      space_between_items: 0.09cm
+
+locale:
+  language: english
+
+settings:
+  current_date: today
