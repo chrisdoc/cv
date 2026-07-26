@@ -26,7 +26,7 @@ jobs:
         run: mise run build
 
       - name: Upload PDF file
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         with:
           name: PDF
           path: CV_Christoph_Kieslich.pdf
