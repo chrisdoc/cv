@@ -1,4 +1,4 @@
-name: Verify Typst document
+name: Verify RenderCV document
 
 on:
   pull_request:
@@ -16,15 +16,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v6
 
-      - name: Typst
-        uses: lvignoli/typst-action@main
-        with:
-          source_file: cv.typ
+      - name: Set up mise
+        uses: jdx/mise-action@v3
 
-      # typst-action outputs a PDF named after the source file; rename it to the
-      # desired public filename for repository links and PR artifacts.
-      - name: Rename PDF
-        run: mv cv.pdf CV_Christoph_Kieslich.pdf
+      - name: Check dependency lockfile
+        run: uv lock --check
+
+      - name: Render CV
+        run: mise run build
 
       - name: Upload PDF file
         uses: actions/upload-artifact@v7

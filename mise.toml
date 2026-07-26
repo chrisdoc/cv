@@ -1,0 +1,18 @@
+[tools]
+python = "3.12.13"
+uv = "0.11.31"
+
+[tasks.setup]
+description = "Install the locked Python dependencies"
+run = "uv sync --locked"
+
+[tasks.build]
+description = "Render CV_Christoph_Kieslich.pdf in the repository root"
+run = """
+uv run --locked rendercv render rendercv.yml \
+  --output-folder .rendercv \
+  --pdf-path CV_Christoph_Kieslich.pdf \
+  --dont-generate-markdown \
+  --dont-generate-html \
+  --dont-generate-png
+"""

@@ -1,0 +1,11 @@
+[project]
+name = "christoph-kieslich-cv"
+version = "0.1.0"
+description = "RenderCV source and build environment for Christoph Kieslich's CV"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+  "rendercv[full]==2.8",
+]
+
+[tool.uv]
+package = false
